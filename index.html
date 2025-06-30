@@ -1,0 +1,464 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavender Flats - Wortley Village Rentals</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #4a4a4a;
+            background: linear-gradient(135deg, #f8f6ff 0%, #ede7f6 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #9c88d4 0%, #7b68c4 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 4px 20px rgba(124, 104, 196, 0.3);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .lavender-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .location {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0;
+            text-align: center;
+            background: linear-gradient(rgba(156, 136, 212, 0.1), rgba(123, 104, 196, 0.1));
+        }
+
+        .hero h2 {
+            font-size: 2.2rem;
+            color: #7b68c4;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            color: #666;
+        }
+
+        /* Units Section */
+        .units {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #7b68c4;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .units-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .unit-card {
+            background: linear-gradient(135deg, #f8f6ff 0%, #ede7f6 100%);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(156, 136, 212, 0.2);
+            border: 2px solid rgba(156, 136, 212, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .unit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(156, 136, 212, 0.3);
+        }
+
+        .unit-title {
+            font-size: 1.8rem;
+            color: #7b68c4;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .unit-features {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .unit-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(156, 136, 212, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .unit-features li:before {
+            content: "🌿";
+            font-size: 1.2rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #ede7f6 0%, #e1bee7 100%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: #7b68c4;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .neighborhood-highlights {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(156, 136, 212, 0.15);
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 1rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .highlight-item:last-child {
+            border-bottom: none;
+        }
+
+        .highlight-icon {
+            font-size: 1.5rem;
+            width: 40px;
+            text-align: center;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 4rem 0;
+            background: white;
+            text-align: center;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #9c88d4 0%, #7b68c4 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            margin: 2rem auto;
+            max-width: 600px;
+            box-shadow: 0 15px 35px rgba(156, 136, 212, 0.3);
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background: #4a4a4a;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .lavender-icon {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                text-align: center;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .units-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-info {
+                margin: 1rem;
+                padding: 2rem;
+            }
+        }
+
+        /* Decorative Elements */
+        .decorative-border {
+            height: 4px;
+            background: linear-gradient(90deg, #9c88d4, #e1bee7, #9c88d4);
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="lavender-icon">🌾</div>
+                    <div>
+                        <h1>Lavender Flats</h1>
+                        <div class="location">Wortley Village, London Ontario</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Charming Duplex Rentals in Historic Wortley Village</h2>
+            <p>Experience the perfect blend of vintage character and modern comfort in one of London's most desirable neighborhoods. Our beautifully maintained duplex offers two distinct living spaces, each with its own unique charm.</p>
+            <div class="decorative-border"></div>
+        </div>
+    </section>
+
+    <section class="units">
+        <div class="container">
+            <h2 class="section-title">Available Units</h2>
+            <div class="units-grid">
+                <div class="unit-card">
+                    <h3 class="unit-title">🏠 Upper Level Unit</h3>
+                    <p>Bright and airy second-floor apartment with original hardwood floors and abundant natural light.</p>
+                    <ul class="unit-features">
+                        <li>Spacious bedrooms with high ceilings</li>
+                        <li>Updated kitchen with modern appliances</li>
+                        <li>Private entrance and outdoor space</li>
+                        <li>On-site laundry facilities</li>
+                        <li>Street parking available</li>
+                        <li>Heat and utilities included</li>
+                    </ul>
+                </div>
+
+                <div class="unit-card">
+                    <h3 class="unit-title">🌿 Main Level Unit</h3>
+                    <p>Ground-floor unit featuring easy access and a charming garden view with original character details.</p>
+                    <ul class="unit-features">
+                        <li>Open-concept living and dining area</li>
+                        <li>Fully equipped modern kitchen</li>
+                        <li>Direct access to shared backyard</li>
+                        <li>In-unit storage solutions</li>
+                        <li>Convenient street-level entry</li>
+                        <li>All utilities included</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">Why Choose Wortley Village?</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>A Neighborhood Rich in Character</h3>
+                    <p>Wortley Village is one of London's most beloved neighborhoods, known for its tree-lined streets, historic homes, and vibrant community spirit. Located just minutes from downtown London, you'll enjoy the perfect balance of urban convenience and neighborhood charm.</p>
+                    <p>Our duplex is situated in the heart of this historic district, putting you within walking distance of boutique shops, cozy cafes, and beautiful parks. The area is well-served by public transportation and offers easy access to major highways for commuting.</p>
+                </div>
+                <div class="neighborhood-highlights">
+                    <h4 style="color: #7b68c4; margin-bottom: 1.5rem; font-size: 1.3rem;">Neighborhood Highlights</h4>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">☕</span>
+                        <span>Walking distance to local cafes and restaurants</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">🚌</span>
+                        <span>Excellent public transit connections</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">🏛️</span>
+                        <span>Close to Western University and Fanshawe College</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">🛍️</span>
+                        <span>Unique boutique shopping on Wortley Road</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">🌳</span>
+                        <span>Beautiful parks and green spaces nearby</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">🏥</span>
+                        <span>Close to medical facilities and services</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-info">
+                <h3>Ready to Make Lavender Flats Your Home?</h3>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <span>Email: info@lavenderflats.ca</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📱</span>
+                        <span>Phone: Available upon inquiry</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <span>Location: Wortley Village, London ON</span>
+                    </div>
+                </div>
+                <div class="decorative-border" style="margin-top: 2rem;"></div>
+                <p style="margin-top: 1.5rem; font-size: 1rem; opacity: 0.9;">
+                    We welcome inquiries about availability, rental rates, and viewing appointments. 
+                    Experience the charm of Wortley Village living at Lavender Flats.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Lavender Flats. All rights reserved. | Wortley Village, London Ontario</p>
+        </div>
+    </footer>
+
+    <script>
+        // Add smooth scrolling for better user experience
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all unit cards and sections
+        document.querySelectorAll('.unit-card, .about-content, .contact-info').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
