@@ -157,8 +157,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (upperUnit && mainUnit) {
             // This could be connected to a real availability API
             const availabilityStatus = {
-                upper: 'Available Now',
-                main: 'Available Dec 1'
+                upper: 'Currently Rented',
+                main: 'Available Now'
             };
             
             upperUnit.textContent = availabilityStatus.upper;
