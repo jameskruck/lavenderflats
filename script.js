@@ -216,6 +216,93 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize gallery tabs
     initializeGalleryTabs();
 
+    // Image & Video lightbox functionality
+    function initializeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxVideo = document.getElementById('lightbox-video');
+        const lightboxVideoSource = document.getElementById('lightbox-video-source');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const closeBtn = document.querySelector('.lightbox-close');
+
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            // Pause and reset video if it was playing
+            if (lightboxVideo.style.display !== 'none') {
+                lightboxVideo.pause();
+                lightboxVideo.currentTime = 0;
+            }
+            // Hide both elements
+            lightboxImg.style.display = 'none';
+            lightboxVideo.style.display = 'none';
+        }
+
+        // Add click listeners to all gallery images
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+            img.addEventListener('click', function(e) {
+                e.preventDefault();
+                const src = this.src;
+                const alt = this.alt;
+                const label = this.closest('.gallery-item').getAttribute('data-label');
+                
+                // Hide video, show image
+                lightboxVideo.style.display = 'none';
+                lightboxImg.style.display = 'block';
+                
+                lightboxImg.src = src;
+                lightboxImg.alt = alt;
+                lightboxCaption.textContent = label || alt;
+                lightbox.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Add click listeners to all videos
+        document.querySelectorAll('.video-item video').forEach(video => {
+            video.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const src = this.querySelector('source').src;
+                const videoInfo = this.closest('.video-item').querySelector('.video-info h4');
+                const label = videoInfo ? videoInfo.textContent : 'Video Tour';
+                
+                // Hide image, show video
+                lightboxImg.style.display = 'none';
+                lightboxVideo.style.display = 'block';
+                
+                // Set video source and type
+                lightboxVideoSource.src = src;
+                lightboxVideoSource.type = this.querySelector('source').type;
+                lightboxVideo.load(); // Reload video with new source
+                lightboxCaption.textContent = label;
+                lightbox.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close lightbox when clicking the close button
+        closeBtn.addEventListener('click', closeLightbox);
+
+        // Close lightbox when clicking outside the content
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && lightbox.style.display === 'block') {
+                closeLightbox();
+            }
+        });
+    }
+
+    // Initialize lightbox
+    initializeLightbox();
+
     // Initialize the map after a short delay to ensure all resources are loaded
     setTimeout(initializeMap, 2000);
 });

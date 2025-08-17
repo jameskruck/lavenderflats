@@ -13,7 +13,18 @@
       "Bash(git commit:*)",
       "Bash(git push:*)",
       "Bash(nslookup:*)",
-      "Bash(ping:*)"
+      "Bash(ping:*)",
+      "Bash(mkdir:*)",
+      "Bash(move \"Backyard (2).JPG\" shared )",
+      "Bash(move \"Backyard.jpg\" shared )",
+      "Bash(move \"floorplan1.webp\" shared )",
+      "Bash(move \"floorplan2.webp\" shared )",
+      "Bash(move \"front door.webp\" shared )",
+      "Bash(move \"frontdoor.png\" shared )",
+      "Bash(move \"sideyard.png\" shared )",
+      "Bash(move \"sideyard.webp\" shared)",
+      "Bash(move \"Backyard.jpg\" shared/)",
+      "Bash(mv:*)"
     ],
     "deny": [],
     "ask": []
