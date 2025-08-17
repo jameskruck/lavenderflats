@@ -14,10 +14,10 @@
         <div class="container">
             <div class="nav-container">
                 <a href="#home" class="nav-link active">Home</a>
-                <a href="#gallery" class="nav-link">Photos</a>
+                <a href="#gallery" class="nav-link">Photos & Videos</a>
                 <a href="#units" class="nav-link">Units</a>
                 <a href="#pricing" class="nav-link">Pricing</a>
-                <a href="#neighborhood" class="nav-link">Neighborhood</a>
+                <a href="#neighbourhood" class="nav-link">Neighbourhood</a>
                 <a href="#contact" class="nav-link">Contact</a>
                 <a href="#faq" class="nav-link">FAQ</a>
             </div>
@@ -35,8 +35,7 @@
                     </div>
                 </div>
                 <div class="quick-contact">
-                    <a href="tel:+15199999999">📞 (519) 999-9999</a>
-                    <a href="mailto:info@lavenderflats.ca">✉️ info@lavenderflats.ca</a>
+                    <a href="#contact">✉️ Send Message</a>
                     <div style="margin-top: 0.5rem; font-size: 0.9rem;">
                         ⏰ Response within 2 hours
                     </div>
@@ -48,7 +47,7 @@
     <section class="hero">
         <div class="container">
             <h2>Charming Duplex Rentals in Historic Wortley Village</h2>
-            <p>Experience the perfect blend of vintage character and modern comfort in one of London's most desirable neighborhoods. Our beautifully maintained duplex offers two distinct living spaces, each with its own unique charm.</p>
+            <p>Experience the perfect blend of vintage character and modern comfort in one of London's most desirable neighbourhoods. Our beautifully maintained duplex offers two distinct living spaces, each with its own unique charm.</p>
             <div class="cta-buttons">
                 <a href="#contact" class="btn btn-primary">Schedule Viewing</a>
                 <a href="#units" class="btn btn-secondary">View Units</a>
@@ -59,43 +58,264 @@
 
     <section id="gallery" class="gallery">
         <div class="container">
-            <h2 class="section-title">Photo Gallery</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item" data-label="Building Entrance">
-                    <img src="media/frontdoor.png" alt="Building Entrance - Charming brick exterior with green French doors">
-                </div>
-                <div class="gallery-item" data-label="Main Unit Floorplan">
-                    <img src="media/mainfloor.png" alt="Main Side Entrance - Mature trees and green lawn space">
-                </div>
-                <div class="gallery-item" data-label="Main Unit Living Room">
-                    <img src="media/mainliving.png" alt="Main Side Entrance - Mature trees and green lawn space">
-                </div>
-                <div class="gallery-item" data-label="Main Unit Bathroom">
-                    <img src="media/bathroom.png" alt="Main Side Entrance - Mature trees and green lawn space">
-                </div>
-                <div class="gallery-item" data-label="Main Unit Backyard">
-                    <img src="media/backmain.png" alt="Shared Backyard - Mature trees and green lawn space">
-                </div>
-                <div class="gallery-item" data-label="Main Unit Backyard">
-                    <img src="media/backmain2.png" alt="Shared Backyard - Mature trees and green lawn space">
-                </div>
-                <div class="gallery-item" data-label="Main Side Entrance">
-                    <img src="media/sideyard.png" alt="Main Side Entrance - Mature trees and green lawn space">
-                </div>
-                <div class="gallery-item" data-label="Upper Unit Backyard">
-                    <img src="media/back22.png" alt="Main Side Entrance - Mature trees and green lawn space">
-                </div>
-                <div class="gallery-item" data-label="Upper Unit Kitchen">
-                    <img src="media/upkitchen2.png" alt="Upper Unit Kitchen - Modern appliances with warm wood cabinets">
-                </div>
-                <div class="gallery-item" data-label="Upper Unit Living Room">
-                    <img src="media/upliving.png" alt="Upper Unit Living Room - Bright space with vaulted ceilings and skylight">
+            <h2 class="section-title">Photos & Virtual Tours</h2>
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem; font-size: 1.1rem;">
+                Explore our beautifully maintained duplex with detailed photos and video tours of each unit.
+            </p>
+            
+            <!-- Gallery Navigation Tabs -->
+            <div class="gallery-tabs">
+                <button class="tab-btn active" data-tab="building">🏠 Building Overview</button>
+                <button class="tab-btn" data-tab="main-unit">🌿 Main Floor Unit</button>
+                <button class="tab-btn" data-tab="upper-unit">🏠 Upper Unit</button>
+                <button class="tab-btn" data-tab="videos">🎬 Video Tours</button>
+            </div>
+
+            <!-- Building Overview Tab -->
+            <div class="tab-content active" id="building-tab">
+                <h3 class="tab-title">Building & Location</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-label="Front Entrance">
+                        <img src="media/frontdoor.png" alt="Building front entrance with green doors">
+                    </div>
+                    <div class="gallery-item" data-label="Building Exterior">
+                        <img src="media/front door.webp" alt="Building exterior view">
+                    </div>
+                    <div class="gallery-item" data-label="Side Yard">
+                        <img src="media/sideyard.png" alt="Side yard and entrance area">
+                    </div>
+                    <div class="gallery-item" data-label="Main Floor Plan">
+                        <img src="media/floorplan1.webp" alt="Main floor unit layout">
+                    </div>
+                    <div class="gallery-item" data-label="Upper Floor Plan">
+                        <img src="media/floorplan2.webp" alt="Upper unit layout">
+                    </div>
+                    <div class="gallery-item" data-label="Shared Backyard">
+                        <img src="media/Backyard.jpg" alt="Shared backyard space">
+                    </div>
                 </div>
             </div>
-            <p style="text-align: center; margin-top: 2rem; color: #666;">
-                📸 More professional photos of bedrooms, bathrooms, and neighborhood coming soon! <br>
-                <a href="#contact" style="color: #7b68c4; text-decoration: underline;">Contact us to schedule a personal viewing.</a>
-            </p>
+
+            <!-- Main Floor Unit Tab -->
+            <div class="tab-content" id="main-unit-tab">
+                <h3 class="tab-title">Main Floor Unit - $2,400/month</h3>
+                <div class="room-section">
+                    <h4 class="room-title">Living Areas</h4>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-label="Living Room">
+                            <img src="media/Living Room.jpg" alt="Main unit living room">
+                        </div>
+                        <div class="gallery-item" data-label="Main Living Area">
+                            <img src="media/mainliving_old.png" alt="Main unit living space">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="room-section">
+                    <h4 class="room-title">Kitchen & Dining</h4>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-label="Kitchen">
+                            <img src="media/Kitchen.jpg" alt="Main unit kitchen">
+                        </div>
+                        <div class="gallery-item" data-label="Kitchen View 2">
+                            <img src="media/Kitchen 2.jpg" alt="Main unit kitchen additional view">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="room-section">
+                    <h4 class="room-title">Bedrooms</h4>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-label="Bedroom 1">
+                            <img src="media/Bedroom1.jpg" alt="Main unit bedroom 1">
+                        </div>
+                        <div class="gallery-item" data-label="Bedroom 1 - View 2">
+                            <img src="media/Bedroom1-2.jpg" alt="Main unit bedroom 1 additional view">
+                        </div>
+                        <div class="gallery-item" data-label="Bedroom 2">
+                            <img src="media/Bedroom2.jpg" alt="Main unit bedroom 2">
+                        </div>
+                        <div class="gallery-item" data-label="Bedroom 2 - View 2">
+                            <img src="media/Bedroom2-2.jpg" alt="Main unit bedroom 2 additional view">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="room-section">
+                    <h4 class="room-title">Bathroom</h4>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-label="Main Bathroom">
+                            <img src="media/main floor bathroom.jpg" alt="Main unit bathroom">
+                        </div>
+                        <div class="gallery-item" data-label="Bathroom - View 2">
+                            <img src="media/main floor bathroom (2).jpg" alt="Main unit bathroom additional view">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="room-section">
+                    <h4 class="room-title">Outdoor Space</h4>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-label="Main Unit Backyard">
+                            <img src="media/backmain.png" alt="Main unit backyard access">
+                        </div>
+                        <div class="gallery-item" data-label="Backyard View 2">
+                            <img src="media/backmain2.png" alt="Main unit backyard view">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upper Unit Tab -->
+            <div class="tab-content" id="upper-unit-tab">
+                <h3 class="tab-title">Upper Unit - $2,400/month</h3>
+                <div class="room-section">
+                    <h4 class="room-title">Living Areas</h4>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-label="Upper Living Room">
+                            <img src="media/upliving.png" alt="Upper unit living room with vaulted ceilings">
+                        </div>
+                        <div class="gallery-item" data-label="Living Room Webp">
+                            <img src="media/living room.webp" alt="Upper unit living space">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="room-section">
+                    <h4 class="room-title">Kitchen</h4>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-label="Upper Kitchen">
+                            <img src="media/upkitchen2.png" alt="Upper unit kitchen with modern appliances">
+                        </div>
+                        <div class="gallery-item" data-label="Kitchen Webp">
+                            <img src="media/upkitchen.webp" alt="Upper unit kitchen view">
+                        </div>
+                        <div class="gallery-item" data-label="Kitchen 2 Webp">
+                            <img src="media/upkitchen2.webp" alt="Upper unit kitchen additional view">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="room-section">
+                    <h4 class="room-title">Bathroom</h4>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-label="Upper Bathroom">
+                            <img src="media/upbathroom.webp" alt="Upper unit bathroom">
+                        </div>
+                        <div class="gallery-item" data-label="Bathroom PNG">
+                            <img src="media/bathroom.png" alt="Upper unit bathroom view">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="room-section">
+                    <h4 class="room-title">Outdoor Spaces</h4>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-label="Upper Deck">
+                            <img src="media/updekc.webp" alt="Upper unit private deck">
+                        </div>
+                        <div class="gallery-item" data-label="Upper Backyard">
+                            <img src="media/back22.png" alt="Upper unit backyard view">
+                        </div>
+                        <div class="gallery-item" data-label="Back2 View">
+                            <img src="media/back2.png" alt="Additional backyard view">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Tours Tab -->
+            <div class="tab-content" id="videos-tab">
+                <h3 class="tab-title">Virtual Video Tours</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem; text-align: center;">
+                    Take a virtual walk-through of our units. Click any video to play/pause.
+                </p>
+                
+                <div class="video-section">
+                    <h4 class="room-title">Main Floor Unit Tours</h4>
+                    <div class="video-grid">
+                        <div class="video-item">
+                            <video muted preload="metadata" onclick="if(this.paused) this.play(); else this.pause();" title="Click to play/pause (No audio)">
+                                <source src="media/main living room.MOV" type="video/quicktime">
+                                <source src="media/main living room.MOV" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-overlay">🔇 Silent</div>
+                            <div class="video-info">
+                                <h4>Main Living Room</h4>
+                                <p>Tour of the main floor living space</p>
+                            </div>
+                        </div>
+                        
+                        <div class="video-item">
+                            <video muted preload="metadata" onclick="if(this.paused) this.play(); else this.pause();" title="Click to play/pause (No audio)">
+                                <source src="media/main kitchen.MOV" type="video/quicktime">
+                                <source src="media/main kitchen.MOV" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-overlay">🔇 Silent</div>
+                            <div class="video-info">
+                                <h4>Main Kitchen</h4>
+                                <p>Modern kitchen with updated appliances</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-section">
+                    <h4 class="room-title">Upper Unit Tours</h4>
+                    <div class="video-grid">
+                        <div class="video-item">
+                            <video muted preload="metadata" onclick="if(this.paused) this.play(); else this.pause();" title="Click to play/pause (No audio)">
+                                <source src="media/bedroom 1.MOV" type="video/quicktime">
+                                <source src="media/bedroom 1.MOV" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-overlay">🔇 Silent</div>
+                            <div class="video-info">
+                                <h4>Upper Bedroom 1</h4>
+                                <p>Spacious bedroom with natural light</p>
+                            </div>
+                        </div>
+                        
+                        <div class="video-item">
+                            <video muted preload="metadata" onclick="if(this.paused) this.play(); else this.pause();" title="Click to play/pause (No audio)">
+                                <source src="media/bedroom 2.MOV" type="video/quicktime">
+                                <source src="media/bedroom 2.MOV" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-overlay">🔇 Silent</div>
+                            <div class="video-info">
+                                <h4>Upper Bedroom 2</h4>
+                                <p>Second bedroom with great layout</p>
+                            </div>
+                        </div>
+                        
+                        <div class="video-item">
+                            <video muted preload="metadata" onclick="if(this.paused) this.play(); else this.pause();" title="Click to play/pause (No audio)">
+                                <source src="media/Backyard.MOV" type="video/quicktime">
+                                <source src="media/Backyard.MOV" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-overlay">🔇 Silent</div>
+                            <div class="video-info">
+                                <h4>Shared Backyard</h4>
+                                <p>Beautiful outdoor space for both units</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--surface); border-radius: 15px; border: 1px solid var(--lavender-primary);">
+                <h4 style="color: var(--text-primary); margin-bottom: 1rem;">Ready to See More?</h4>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                    Schedule a personal viewing to experience the charm and character of Lavender Flats in person.
+                </p>
+                <a href="mailto:lindsaymferrier@gmail.com?subject=Viewing Request" class="btn btn-primary">
+                    📅 Schedule Your Viewing
+                </a>
+            </div>
         </div>
     </section>
 
@@ -138,12 +358,12 @@
                         <li>Updated kitchen with modern appliances</li>
                         <li>Private entrance and outdoor space, including deck</li>
                         <li>In-suite laundry</li>
-                        <li>Pet-friendly (with restrictions)</li>
+                        <li>Small pet-friendly (with restrictions)</li>
                     </ul>
                     
                     <div style="margin-top: 1.5rem;">
-                        <a href="#contact" class="btn btn-primary" style="display: inline-block;">Apply Now</a>
-                        <a href="#contact" class="btn btn-secondary" style="display: inline-block; margin-left: 1rem;">Schedule Viewing</a>
+                        <a href="resources/(Ontario) 410 - Rental Application - Residential (5) (2).pdf" download="Lavender_Flats_Application.pdf" class="btn btn-primary" style="display: inline-block;">📥 Download Application</a>
+                        <a href="mailto:lindsaymferrier@gmail.com?subject=Viewing Request - Upper Unit" class="btn btn-secondary" style="display: inline-block; margin-left: 1rem;">📅 Schedule Viewing</a>
                     </div>
                 </div>
 
@@ -151,8 +371,8 @@
                     <div class="unit-header">
                         <h3 class="unit-title">🌿 Main Level Unit</h3>
                         <div>
-                            <div class="unit-price">$2,800/month</div>
-                            <div class="unit-availability">Available Sep 1</div>
+                            <div class="unit-price">$2,400/month</div>
+                            <div class="unit-availability">Available Now</div>
                         </div>
                     </div>
                     
@@ -184,11 +404,12 @@
                         <li>In-unit storage solutions</li>
                         <li>In-suite laundry</li>
                         <li>Convenient street-level entry</li>
+                        <li>Small pet-friendly (with restrictions)</li>
                     </ul>
                     
                     <div style="margin-top: 1.5rem;">
-                        <a href="#contact" class="btn btn-primary" style="display: inline-block;">Join Waitlist</a>
-                        <a href="#contact" class="btn btn-secondary" style="display: inline-block; margin-left: 1rem;">Get Notified</a>
+                        <a href="resources/(Ontario) 410 - Rental Application - Residential (5) (2).pdf" download="Lavender_Flats_Application.pdf" class="btn btn-primary" style="display: inline-block;">📥 Download Application</a>
+                        <a href="mailto:lindsaymferrier@gmail.com?subject=Viewing Request - Main Unit" class="btn btn-secondary" style="display: inline-block; margin-left: 1rem;">📅 Schedule Viewing</a>
                     </div>
                 </div>
             </div>
@@ -207,14 +428,6 @@
                     <div class="pricing-row">
                         <span class="pricing-label">Security Deposit</span>
                         <span class="pricing-value">First & Last Month's Rent</span>
-                    </div>
-                    <div class="pricing-row">
-                        <span class="pricing-label">Pet Deposit</span>
-                        <span class="pricing-value">$300 (refundable)</span>
-                    </div>
-                    <div class="pricing-row">
-                        <span class="pricing-label">Application Fee</span>
-                        <span class="pricing-value">$50 (credit check)</span>
                     </div>
                     <div class="pricing-row">
                         <span class="pricing-label">Lease Term</span>
@@ -237,13 +450,13 @@
         </div>
     </section>
 
-    <section id="neighborhood" class="neighborhood">
+    <section id="neighbourhood" class="neighbourhood">
         <div class="container">
-            <h2 class="section-title">Explore the Neighborhood</h2>
-            <div class="neighborhood-content">
+            <h2 class="section-title">Explore the Neighbourhood</h2>
+            <div class="neighbourhood-content">
                 <div id="map" style="height: 400px; border-radius: 20px; box-shadow: 0 10px 25px rgba(156, 136, 212, 0.15);">
                 </div>
-                <div class="neighborhood-highlights">
+                <div class="neighbourhood-highlights">
                     <h4 style="color: #7b68c4; margin-bottom: 1.5rem; font-size: 1.3rem;">Nearby Amenities</h4>
                     <div class="highlight-item">
                         <span class="highlight-icon">☕</span>
@@ -301,62 +514,40 @@
             <h2 class="section-title">Contact Us</h2>
             <div class="contact-grid">
                 <div class="contact-form fade-in">
-                    <h3 style="color: #7b68c4; margin-bottom: 1.5rem;">Send us a Message</h3>
-                    <div class="form-group">
-                        <label for="inquiry-type">Inquiry Type</label>
-                        <select id="inquiry-type" name="inquiry-type" required>
-                            <option value="">Select inquiry type</option>
-                            <option value="viewing">Schedule Viewing</option>
-                            <option value="application">Rental Application</option>
-                            <option value="availability">Check Availability</option>
-                            <option value="general">General Question</option>
-                        </select>
+                    <h3 style="color: var(--lavender-primary); margin-bottom: 1.5rem;">Get In Touch</h3>
+                    
+                    <div style="background: var(--surface); padding: 2rem; border-radius: 15px; margin-bottom: 2rem; border: 2px solid var(--lavender-primary);">
+                        <h4 style="color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;">
+                            📄 Ready to Apply?
+                        </h4>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                            Download our rental application form and submit it via email to get started.
+                        </p>
+                        <a href="resources/(Ontario) 410 - Rental Application - Residential (5) (2).pdf" 
+                           download="Lavender_Flats_Application.pdf" 
+                           class="btn btn-primary" 
+                           style="display: inline-block; margin-right: 1rem;">
+                            📥 Download Application
+                        </a>
+                        <a href="mailto:lindsaymferrier@gmail.com?subject=Lavender Flats Inquiry" 
+                           class="btn btn-secondary" 
+                           style="display: inline-block;">
+                            ✉️ Email Us
+                        </a>
                     </div>
                     
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="first-name">First Name</label>
-                            <input type="text" id="first-name" name="first-name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="last-name">Last Name</label>
-                            <input type="text" id="last-name" name="last-name" required>
-                        </div>
+                    <div style="background: var(--surface); padding: 2rem; border-radius: 15px; border: 1px solid rgba(156, 136, 212, 0.3);">
+                        <h4 style="color: var(--text-primary); margin-bottom: 1rem;">How to Apply:</h4>
+                        <ol style="color: var(--text-secondary); line-height: 1.8; padding-left: 1.5rem;">
+                            <li>Download the application form above</li>
+                            <li>Fill it out completely and gather required documents</li>
+                            <li>Email completed application to lindsaymferrier@gmail.com</li>
+                            <li>We'll review and contact you within 24-48 hours</li>
+                        </ol>
                     </div>
                     
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="preferred-unit">Preferred Unit</label>
-                        <select id="preferred-unit" name="preferred-unit">
-                            <option value="">No preference</option>
-                            <option value="upper">Upper Level Unit</option>
-                            <option value="main">Main Level Unit</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="move-in-date">Desired Move-in Date</label>
-                        <input type="date" id="move-in-date" name="move-in-date">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Tell us about yourself, any questions, or special requests..."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-                    <p style="font-size: 0.9rem; color: #666; margin-top: 1rem; text-align: center;">
-                        ⏰ We respond to all inquiries within 2 hours during business hours
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 1rem; text-align: center;">
+                        ⏰ We respond to all inquiries within 2 hours
                     </p>
                 </div>
 
@@ -367,14 +558,7 @@
                             <div class="contact-item-icon">📧</div>
                             <div>
                                 <strong>Email</strong><br>
-                                <a href="mailto:info@lavenderflats.ca" style="color: white;">info@lavenderflats.ca</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-item-icon">📱</div>
-                            <div>
-                                <strong>Phone</strong><br>
-                                <a href="tel:+15199999999" style="color: white;">(519) 999-9999</a>
+                                <a href="#contact" style="color: white;">Send us a message</a>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -385,28 +569,8 @@
                                 London, ON
                             </div>
                         </div>
-                        <div class="contact-item">
-                            <div class="contact-item-icon">⏰</div>
-                            <div>
-                                <strong>Office Hours</strong><br>
-                                Mon-Fri: 9am-7pm<br>
-                                Sat-Sun: 10am-5pm
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-item-icon">🚨</div>
-                            <div>
-                                <strong>Emergency</strong><br>
-                                24/7 Maintenance Line<br>
-                                <a href="tel:+15199999988" style="color: white;">(519) 999-9988</a>
-                            </div>
-                        </div>
                     </div>
                     <div class="decorative-border" style="margin-top: 2rem;"></div>
-                    <p style="margin-top: 1.5rem; font-size: 1rem; opacity: 0.9; text-align: center;">
-                        <strong>Professional Property Management</strong><br>
-                        Licensed & Insured • Member of LANDCO
-                    </p>
                 </div>
             </div>
         </div>
@@ -422,7 +586,7 @@
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Our application process is simple: 1) Fill out our online application form, 2) Provide employment verification and references, 3) Credit check ($50 fee), 4) Application review (24-48 hours), 5) Lease signing and key handover. We require first and last month's rent upfront.</p>
+                    <p>Our application process is simple: 1) Download and complete our PDF application form, 2) Provide employment verification and references, 3) Email completed application to us, 4) Application review (24-48 hours), 5) Lease signing and key handover. We require first and last month's rent upfront.</p>
                 </div>
             </div>
 
@@ -432,7 +596,7 @@
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Yes, pet cats are allowed. There's a limit of 2 pets per unit.</p>
+                    <p>Yes, some pets are allowed. There's a limit of 2 pets per unit.</p>
                 </div>
             </div>
 
@@ -456,15 +620,6 @@
                 </div>
             </div>
 
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    How quickly are maintenance requests handled?
-                    <span class="faq-toggle">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Non-emergency maintenance requests are typically handled within 24-48 hours. Emergency issues (no heat, plumbing problems, security concerns) are addressed immediately via our 24/7 emergency line. We pride ourselves on responsive property management.</p>
-                </div>
-            </div>
 
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
@@ -498,29 +653,34 @@
             <div class="application-steps">
                 <div class="step-card fade-in">
                     <div class="step-number">1</div>
-                    <div class="step-title">Submit Application</div>
-                    <p>Complete our online application form with your personal and employment information.</p>
+                    <div class="step-title">Download Application</div>
+                    <p>Download our PDF application form and fill it out completely with your personal and employment information.</p>
                 </div>
                 <div class="step-card fade-in">
                     <div class="step-number">2</div>
-                    <div class="step-title">Documentation</div>
-                    <p>Provide employment verification, references, and ID. Credit check fee applies.</p>
+                    <div class="step-title">Gather Documentation</div>
+                    <p>Collect employment verification, references, and ID to submit with your application.</p>
                 </div>
                 <div class="step-card fade-in">
                     <div class="step-number">3</div>
-                    <div class="step-title">Review Process</div>
-                    <p>We review all applications within 24-48 hours and contact you with our decision.</p>
+                    <div class="step-title">Email Application</div>
+                    <p>Send your completed application and documents to lindsaymferrier@gmail.com.</p>
                 </div>
                 <div class="step-card fade-in">
                     <div class="step-number">4</div>
-                    <div class="step-title">Move In</div>
-                    <p>Sign your lease, pay first and last month's rent, and get your keys!</p>
+                    <div class="step-title">Review & Move In</div>
+                    <p>We review applications within 24-48 hours, then arrange lease signing and key handover!</p>
                 </div>
             </div>
             
             <div style="text-align: center; margin-top: 3rem;">
-                <a href="#contact" class="btn btn-primary" style="font-size: 1.1rem; padding: 1.2rem 3rem;">Start Your Application</a>
-                <div style="margin-top: 1rem; color: #666;">
+                <a href="resources/(Ontario) 410 - Rental Application - Residential (5) (2).pdf" 
+                   download="Lavender_Flats_Application.pdf" 
+                   class="btn btn-primary" 
+                   style="font-size: 1.1rem; padding: 1.2rem 3rem;">
+                   📥 Download Application Form
+                </a>
+                <div style="margin-top: 1rem; color: var(--text-muted);">
                     📋 <strong>Required Documents:</strong> Government ID, Employment Letter, 2 References, Banking Information
                 </div>
             </div>
@@ -534,8 +694,7 @@
                     <h4>Lavender Flats</h4>
                     <p>Premium rental accommodations in the heart of Wortley Village, London Ontario.</p>
                     <div style="margin-top: 1rem;">
-                        <div>📧 info@lavenderflats.ca</div>
-                        <div>📱 (519) 999-9999</div>
+                        <div>📧 Contact form below</div>
                     </div>
                 </div>
                 
@@ -544,7 +703,7 @@
                     <ul>
                         <li><a href="#units">Available Units</a></li>
                         <li><a href="#pricing">Pricing & Terms</a></li>
-                        <li><a href="#neighborhood">Neighborhood</a></li>
+                        <li><a href="#neighbourhood">Neighbourhood</a></li>
                         <li><a href="#contact">Contact Us</a></li>
                         <li><a href="#faq">FAQ</a></li>
                     </ul>
@@ -553,11 +712,11 @@
                 <div class="footer-section">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="#application">Application Process</a></li>
-                        <li><a href="#">Rental Agreement (PDF)</a></li>
-                        <li><a href="#">Tenant Handbook (PDF)</a></li>
-                        <li><a href="#">Maintenance Request</a></li>
-                        <li><a href="#">Emergency Contacts</a></li>
+                        <li><a href="resources/(Ontario) 410 - Rental Application - Residential (5) (2).pdf" download="Lavender_Flats_Application.pdf">📥 Download Application</a></li>
+                        <li><a href="mailto:lindsaymferrier@gmail.com?subject=Viewing Request">📅 Schedule Viewing</a></li>
+                        <li><a href="mailto:lindsaymferrier@gmail.com?subject=General Inquiry">✉️ General Inquiries</a></li>
+                        <li><a href="#faq">❓ Frequently Asked Questions</a></li>
+                        <li><a href="#neighbourhood">🗺️ Neighbourhood Info</a></li>
                     </ul>
                 </div>
                 
@@ -569,10 +728,6 @@
                         <li><a href="#">Rental Policies</a></li>
                         <li><a href="#">Fair Housing</a></li>
                     </ul>
-                    <div style="margin-top: 1rem; font-size: 0.9rem;">
-                        Licensed Property Management<br>
-                        LANDCO Member #12345
-                    </div>
                 </div>
             </div>
             

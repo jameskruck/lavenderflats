@@ -141,45 +141,13 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 
-    // Form submission handling
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Basic form validation
-            const requiredFields = this.querySelectorAll('[required]');
-            let isValid = true;
-            
-            requiredFields.forEach(field => {
-                if (!field.value.trim()) {
-                    field.style.borderColor = '#e74c3c';
-                    isValid = false;
-                } else {
-                    field.style.borderColor = '#e0e0e0';
-                }
-            });
-            
-            if (isValid) {
-                // Show success message
-                const button = this.querySelector('button[type="submit"]');
-                const originalText = button.textContent;
-                button.textContent = 'Message Sent! ✓';
-                button.style.background = '#4caf50';
-                
-                setTimeout(() => {
-                    button.textContent = originalText;
-                    button.style.background = '';
-                    this.reset();
-                }, 3000);
-                
-                // Here you would typically send the form data to your server
-                console.log('Form submitted successfully');
-            } else {
-                alert('Please fill in all required fields.');
-            }
+    // PDF download tracking (optional analytics)
+    document.querySelectorAll('a[download*="Application"]').forEach(link => {
+        link.addEventListener('click', function() {
+            console.log('Application PDF downloaded');
+            // You could add analytics tracking here if needed
         });
-    }
+    });
 
     // Add some dynamic pricing updates based on availability
     function updateAvailability() {
@@ -219,6 +187,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add the weather widget
     addWeatherWidget();
+
+    // Gallery tab switching functionality
+    function initializeGalleryTabs() {
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetTab = button.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and content
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Show corresponding content
+                const targetContent = document.getElementById(`${targetTab}-tab`);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+    }
+
+    // Initialize gallery tabs
+    initializeGalleryTabs();
 
     // Initialize the map after a short delay to ensure all resources are loaded
     setTimeout(initializeMap, 2000);
